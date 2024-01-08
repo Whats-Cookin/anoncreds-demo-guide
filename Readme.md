@@ -26,7 +26,7 @@ This document guides you through setting up and running the demo agents for Arie
       ```
       LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber
       ```
-      ![Screenshot](faber-agent-running in-terminal.png)
+      ![Screenshot](faber-agent-running-in-terminal.png)
    - **Acme:**
       ```
       LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo acme
