@@ -19,12 +19,12 @@ This document guides you through setting up and running the demo agents for Arie
 
    - **Alice:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice --wallet-type askar-anoncreds --events
       ```
       ![Screenshot](alice-agent-running-in-terminal.png)
    - **Faber:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber --wallet-type askar-anoncreds --cred-type vc_di --events
       ```
       ![Screenshot](faber-agent-running in-terminal.png)
    - **Acme:**
