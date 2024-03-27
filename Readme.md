@@ -16,18 +16,20 @@ This document guides you through setting up and running the demo agents for Arie
    ```
 
 2. **Start the demo agents:**
+   The --events flag is for debugging and viewing all events sent back and forth.
 
    - **Alice:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice --wallet-type askar-anoncreds --events
       ```
       ![Screenshot](alice-agent-running-in-terminal.png)
    - **Faber:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber --wallet-type askar-anoncreds --cred-type vc_di --events
       ```
       ![Screenshot](faber-agent-running-in-terminal.png)
    - **Acme:**
+     (not needed for our work)
       ```
       LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo acme
       ```
