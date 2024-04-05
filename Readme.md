@@ -64,8 +64,9 @@ This document guides you through setting up and running the demo agents for Arie
       ```
       ./run_demo run faber --wallet-type askar-anoncreds --cred-type vc_di --events
       ```
-      ![Screenshot](faber-agent-running in-terminal.png)
+      ![Screenshot](faber-agent-running-in-terminal.png)
    - **Acme:**
+     (not needed for our work)
       ```
       ./run_demo run acme
       ```
