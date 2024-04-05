@@ -17,21 +17,64 @@ This document guides you through setting up and running the demo agents for Arie
 
 2. **Start the demo agents:**
 
+2a. **Using the LEDGER_URL**
+   - **Build the docker image**
+      ```
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo build alice
+      ```
+      * you can either build alice or faber
+
    - **Alice:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo alice --wallet-type askar-anoncreds --events
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo run alice --wallet-type askar-anoncreds --events
       ```
       ![Screenshot](alice-agent-running-in-terminal.png)
    - **Faber:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo faber --wallet-type askar-anoncreds --cred-type vc_di --events
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo run faber --wallet-type askar-anoncreds --cred-type vc_di --events
+      ```
+      ![Screenshot](faber-agent-running-in-terminal.png)
+   - **Acme:**
+      ```
+      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo run acme
+      ```
+      ![Screenshot](acme-running-in-terminal.png)
+
+2b. **Using the von network**
+
+   - **Run the von network**
+      - Clone the von network repo: ```git clone https://github.com/bcgov/von-network.git```
+      - Start the network
+         - Navigate into the von-network directory
+         - Build the network image: In your there run this command ```./manage build```
+         - Start the network: ```./manage start --logs```
+      
+   - **Build the docker image**
+      ```
+      ./run_demo build alice
+      ```
+      * you can either build alice or faber
+
+   - **Alice:**
+      ```
+      ./run_demo run alice --wallet-type askar-anoncreds --events
+      ```
+      ![Screenshot](alice-agent-running-in-terminal.png)
+   - **Faber:**
+      ```
+      ./run_demo run faber --wallet-type askar-anoncreds --cred-type vc_di --events
       ```
       ![Screenshot](faber-agent-running in-terminal.png)
    - **Acme:**
       ```
-      LEDGER_URL=http://dev.greenlight.bcovrin.vonx.io ./run_demo acme
+      ./run_demo run acme
       ```
       ![Screenshot](acme-running-in-terminal.png)
+
+   - **Some flags to note for both Alice and Faber commands**
+      * --wallet-type: specifes the wallet that will be used during this transaction. asker-anoncreds wallet support the w3c format so it is being used.
+      * --cred-type: specifies the format of credential that is to be issued
+      * --events: shows agent's event log; the payloads  will contain the connection request and acceptance message
 
 3. **Access Agent APIs:**
 
