@@ -67,8 +67,13 @@ This document guides you through setting up and running the demo agents for Arie
       ![Screenshot](alice-agent-running-in-terminal.png)
    - **Faber:**
       ```
+      ./run_demo run faber --wallet-type askar-anoncreds --events
+      ```
+      or
+      ```
       ./run_demo run faber --wallet-type askar-anoncreds --cred-type vc_di --events
       ```
+      * Note: Indicating the type of credential as a flag is not required because you can set it by using the 1(a) option
       ![Screenshot](faber-agent-running-in-terminal.png)
    - **Acme:**
      (not needed for our work)
@@ -101,7 +106,7 @@ This document guides you through setting up and running the demo agents for Arie
    The following activities are available for testing agent interactions:
 
    - **(1) Issue Credential:** Issue a credential from Faber to Alice.
-   - **(1a) Set Credential Type (indy):**  Change the type of credential being offered by Fab
+   - **(1a) Set Credential Type (indy):**  Change the type of credential being offered by Faber
    - **(2) Send Proof Request:** Faber requests a proof from Alice.
    - **(2a) Send *Connectionless* Proof Request:** Faber requests a proof from Alice without an established connection (requires a mobile client).
    - **(3) Send Message:** Send a message between agents.
